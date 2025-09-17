@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "252829411873",
+    "project_id": "gobinew",
+    "storage_bucket": "gobinew.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252829411873:android:21fe65d69dabb426c6d160",
+        "android_client_info": {
+          "package_name": "com.gobi.gobinew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252829411873-k8f56b2ssn53jejuh7bvhlbsrmar8f1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gobi.gobinew",
+            "certificate_hash": "6a9732838e7664da6eb2c1d1710c60ff712e4397"
+          }
+        },
+        {
+          "client_id": "252829411873-hgab473g8bsc6hg8qfc9f9sqrec10tk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsuJj2TEcoxIDOWRKoF2LvRG9FpGoXWXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252829411873-hgab473g8bsc6hg8qfc9f9sqrec10tk3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "252829411873-p3nc6pi7snufqqt2l6cdol587kjlak3n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gobi.gobinew"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
