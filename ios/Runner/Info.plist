@@ -12,6 +12,8 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-9848688753999400~7029442813</string>
 	<key>CFBundleName</key>
 	<string>gobinew</string>
 	<key>CFBundlePackageType</key>
