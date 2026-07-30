@@ -213,7 +213,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController passwordController = TextEditingController();
 
   Future<void> login() async {
-    if (emailController.text.trim().isEmpty || passwordController.text.trim().isEmpty) {
+    if (emailController.text.trim().isEmpty ||
+        passwordController.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please enter both email and password')),
       );
@@ -252,7 +253,7 @@ class _LoginPageState extends State<LoginPage> {
         automaticallyImplyLeading: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -261,41 +262,88 @@ class _LoginPageState extends State<LoginPage> {
               decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.email),
+                prefixIcon: Icon(Icons.invert_colors_on),
               ),
               keyboardType: TextInputType.emailAddress,
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             TextField(
               controller: passwordController,
               decoration: const InputDecoration(
-                labelText: 'Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-                prefixIcon: Icon(Icons.lock_outline_rounded),
+                labelText: 'password',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.invert_colors_on),
               ),
               obscureText: true,
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: login,
-              child: const Text('Login'),
-            ),
+            const SizedBox(height: 10),
+            ElevatedButton(onPressed: login, child: Text("login")),
+
+            const SizedBox(height: 10),
             TextButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const SignupPage()),
+                  MaterialPageRoute(builder: (_) => SignupPage()),
                 );
               },
-              child: const Text('Don\'t have an account? Sign Up'),
+              child: Text("Signup"),
             ),
           ],
         ),
       ),
+      // body: Padding(
+      //   padding: const EdgeInsets.all(20),
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: [
+      //       TextField(
+      //         controller: emailController,
+      //         decoration: const InputDecoration(
+      //           labelText: 'Email',
+      //           border: OutlineInputBorder(),
+      //           prefixIcon: Icon(Icons.email),
+      //         ),
+      //         keyboardType: TextInputType.emailAddress,
+      //       ),
+      //       const SizedBox(height: 15),
+      //       TextField(
+      //         controller: passwordController,
+      //         decoration: const InputDecoration(
+      //           labelText: 'Password',
+      //           border: OutlineInputBorder(
+      //             borderRadius: BorderRadius.all(Radius.circular(10)),
+      //           ),
+      //           prefixIcon: Icon(Icons.lock_outline_rounded),
+      //         ),
+      //         obscureText: true,
+      //       ),
+      //       const SizedBox(height: 20),
+      //       ElevatedButton(
+      //         onPressed: login,
+      //         child: const Text('Login'),
+      //       ),
+      //       TextButton(
+      //         onPressed: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (_) => const SignupPage()),
+      //           );
+      //         },
+      //         child: const Text('Don\'t have an account? Sign Up'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
+
+  // @override
+  // void dispose() {
+  //   emailController.dispose();
+  //   passwordController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   void dispose() {
